@@ -5,7 +5,7 @@ agent any
 stages {
 stage('Build') {
 steps {
-sh 'make'
+bat 'make'
 archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
 }
 }
@@ -14,7 +14,7 @@ archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
 // Script //
 node {
 stage('Build') {
-sh 'make'
+bat 'make'
 archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
 }
 }
