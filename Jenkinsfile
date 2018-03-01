@@ -3,4 +3,4 @@ node {
 checkout scm
 /* .. snip .. */
 }
-// Declarative not yet implemented //
+// Declarative not yet implemented  //
