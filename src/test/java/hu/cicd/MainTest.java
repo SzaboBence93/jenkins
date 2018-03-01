@@ -28,4 +28,20 @@ public class MainTest {
         // then
         assertEquals(expected, result);
     }
+
+    @Test
+    public void testGonnaFail(){
+        // given
+        int a = 1;
+        int b = 222;
+
+        int expected = 3;
+
+        // when
+        int result = main.add(a,b);
+
+        // then
+        assertEquals(expected, result);
+    }
+
 }
