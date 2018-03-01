@@ -1,20 +1,12 @@
-#!/usr/bin/env groovy
-// Declarative //
-pipeline {
-agent any
-stages {
-stage('Build') {
-steps {
-sh 'make'
-archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
-}
-}
-}
-}
 // Script //
 node {
-stage('Build') {
-sh 'make'
-archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
+/* .. snip .. */
+stage('Test') {
+/* `make check` returns non-zero on test failures,
+* using `true` to allow the Pipeline to continue nonetheless
+*/
+sh 'make check || true' ①
+junit '**/target/*.xml' ②
 }
+/* .. snip .. */
 }
