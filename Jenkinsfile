@@ -1,4 +1,6 @@
 // Script //
+
+def depl = "deploy"
 node {
 
 stage('SCM') {
@@ -13,7 +15,7 @@ stage('BUILD') {
 }
 stage('Deploy') {
     if (currentBuild.result == null || currentBuild.result == 'SUCCESS') {
-         echo 'i could deploy this'
+         echo 'i could ${depl} this'
     }
 }
 
