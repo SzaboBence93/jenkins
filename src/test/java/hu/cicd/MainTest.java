@@ -35,7 +35,7 @@ public class MainTest {
         int a = 1;
         int b = 222;
 
-        int expected = 3;
+        int expected = 223;
 
         // when
         int result = main.add(a,b);
