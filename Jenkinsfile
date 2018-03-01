@@ -16,6 +16,7 @@ stage('BUILD') {
 stage('Deploy') {
     if (currentBuild.result == null || currentBuild.result == 'SUCCESS') {
          echo "i could ${depl} this"
+         echo "${env.JOB_NAME}"
     }
 }
 
