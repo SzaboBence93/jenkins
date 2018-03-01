@@ -1,6 +1,7 @@
 // Script //
 node {
-checkout scm ①
+checkout scm
+echo "Hello World"
 /* .. snip .. */
 }
 // Declarative not yet implemented //
