@@ -1,4 +1,3 @@
-// Script //
 
 def depl = 'deploy'
 node {
